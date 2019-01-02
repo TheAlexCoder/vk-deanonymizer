@@ -1,1 +1,3 @@
-# vk-deanonymizer
+# VK Deanonymizer
+## Программа, деанонимизироваящая аккаунты VK
+
