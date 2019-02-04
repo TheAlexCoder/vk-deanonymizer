@@ -25,7 +25,7 @@ def work_on_args(argv):
         exit(0)
 
     elif len(argv) > 2:
-        log.warning('Incorrect using')
+        log.warning('Incorrect usage')
         print('Example: ' + argv[0] + ' 12345')
         exit(0)
 
