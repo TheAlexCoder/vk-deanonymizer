@@ -3,7 +3,7 @@ import log
 import pictorem as pct
 
 with open('key.txt', 'r') as file:
-    key = file.read()
+    key = file.read().replace('\n', '').replace(' ', '')
     file.close()
 
 if len(key) < 5:
