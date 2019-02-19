@@ -170,3 +170,14 @@ def get_info(user_id):
     ).json()
 
     return response['response'][0]
+
+
+def get_reg_date(user_id):
+    response = requests.get(
+        'https://vk.com/foaf.php?id=' + str(user_id)
+    ).text
+
+    a = response.index('ya:created dc:date="') + len('ya:created dc:date="')
+    b = response[a+1:].index('T') + a + 1
+
+    return response[a:b].replace('-', '.')

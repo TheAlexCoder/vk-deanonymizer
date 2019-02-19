@@ -87,6 +87,11 @@ def main():
     print(tab + pct.yellow.bold('Computational information:'))
     print(frame)
     print()
+
+    try:
+        print(tab + pct.green.bold('Registration date: ') + lib.get_reg_date(user_id))
+    except: pass
+
     print(tab + pct.green.bold('Possible last name: ') + possible_last_name)
     print(tab + pct.green.bold('Possible age: ') + possible_age)
     print(tab + pct.green.bold('Possible city: ') + possible_city)
