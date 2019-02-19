@@ -11,6 +11,15 @@ if len(key) < 5:
     exit(0)
 
 
+def work_on_bdate(bdate):
+    spl = bdate.split('.')
+
+    if len(spl) == 3:
+        return spl[2]
+    else:
+        return False
+
+
 def work_on_args(argv):
     if '--help' in argv or '-h' in argv:
         print()
@@ -145,3 +154,19 @@ def get_frame(tab, title, color):
         frame = 'ERROR'
 
     return frame
+
+
+def get_info(user_id):
+    fields = 'sex, bdate, city, country'
+
+    response = requests.get(
+        'https://api.vk.com/method/users.get',
+        params={
+            'v': 5.92,
+            'access_token': key,
+            'user_ids': user_id,
+            'fields': fields,
+        }
+    ).json()
+
+    return response['response'][0]

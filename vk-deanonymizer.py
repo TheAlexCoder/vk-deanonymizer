@@ -72,6 +72,8 @@ def main():
     max = lib.get_max_count_of_same_elements(last_names)
     possible_last_name = lib.get_possible(last_names, max)
 
+    info = lib.get_info(user_id)
+
     tab = '     '
 
     title = tab + 'Report for ' + name + ' (' + link + ')'
@@ -82,12 +84,73 @@ def main():
     print()
     print(title)
     print()
+    print(tab + pct.yellow.bold('Computational information:'))
     print(frame)
     print()
     print(tab + pct.green.bold('Possible last name: ') + possible_last_name)
     print(tab + pct.green.bold('Possible age: ') + possible_age)
     print(tab + pct.green.bold('Possible city: ') + possible_city)
     print(tab + pct.green.bold('Possible sex: ') + possible_sex)
+    print()
+    print(frame)
+    print()
+    print()
+    print(tab + pct.yellow.bold('Public information:'))
+    print(frame)
+    print()
+
+    print(tab + pct.green.bold('First name: ') + info['first_name'])
+    print(tab + pct.green.bold('Last name: ') + info['last_name'])
+
+    try:
+        sex = info['sex']
+
+        if sex == 1:
+            sex = 'Female'
+
+        elif sex == 2:
+            sex = 'Male'
+
+        print(tab + pct.green.bold('Sex: ') + sex)
+
+    except: pass
+
+    try:
+        bdate = info['bdate']
+        byear = lib.work_on_bdate(bdate)
+
+        if bdate:
+            print(tab + pct.green.bold('Age: ') + str(current_year - int(byear)))
+
+    except: pass
+
+    try:
+        city = info['city']['title']
+        print(tab + pct.green.bold('City: ') + city)
+
+    except: pass
+
+    try:
+        country = info['country']['title']
+        print(tab + pct.green.bold('Country: ') + country)
+
+    except: pass
+
+    try:
+        univer = info['university_name']
+        print(tab + pct.green.bold('University: ') + univer)
+
+    except: pass
+
+    try:
+        fac = info['faculty_name']
+        print(tab + pct.green.bold('Faculty: ') + fac)
+
+    except: pass
+
+    print()
+    print(tab + pct.white.bold('You can see more public information at ' + link))
+
     print()
     print(frame)
 
