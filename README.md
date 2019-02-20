@@ -31,7 +31,7 @@ $ sudo pip3 install -r requirements.txt
 7. Пропишите команду ```pip install  -r requirements.txt```.
 
 # Запуск
-* Чтобы воспользоваться программой, вам необходимо получить ВК access token. Это можно сделать например <a href="https://vkhost.github.io/">здесь</a>.
+#### Чтобы воспользоваться программой, вам необходимо получить ВК access token. Это можно сделать например <a href="https://vkhost.github.io/">здесь</a>.
 * Поместите ваш ВК access token в файл ```key.txt```.
 
 
