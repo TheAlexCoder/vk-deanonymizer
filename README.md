@@ -21,6 +21,13 @@ $ sudo apt install python3-pip
 $ sudo pip3 install -r requirements.txt
 ```
 ## Установка на Windows
+1. Скачайте <a href="https://github.com/jieggii/vk-deanonymizer.git">vk-deanonymizer</a>.
+2. Скачайте интерпретатор Python 3 с <a href="https://python.org">официального сайта</a>.
+3. Начните установку Python 3.
+4. При установке нажмите на кнопку "Customize installation" и убедитесь, что стоит галочка на пункте "pip".
+5. Откройте коммандную строку (cmd).
+6. Пропишите команду ```cd [путь до vk-deanonymizer]```.
+7. Пропишите команду ```pip install  -r requirements.txt```.
 
 
 
