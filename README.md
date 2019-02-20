@@ -29,6 +29,7 @@ $ sudo pip3 install -r requirements.txt
 5. Откройте коммандную строку (cmd).
 6. Пропишите команду ```cd [путь до vk-deanonymizer]```
 7. Пропишите команду ```pip install  -r requirements.txt```
+* Также рекомендую использовать <a href="http://conemu.ru/ru/">Con Emu</a> для корректного отображения цветов.
 
 # Запуск
 #### Чтобы воспользоваться программой, вам необходимо получить ВК access token. Это можно сделать например <a href="https://vkhost.github.io/">здесь</a>.
