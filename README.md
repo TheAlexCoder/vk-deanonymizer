@@ -11,19 +11,16 @@
 * Вы не должны быть в ЧС у цели.
 
 # Установка
-<details>
-  <summary><h2>Установка (Linux)</h1></summary>
-  
-  text 
-  text
-</details>
-
-<details>
-  <summary><h2>Установка (Windows)</h1></summary>
-  
-  text 
-  text
-</details>
+## Установка на Linux
+```
+$ git clone https://github.com/jieggii/vk-deanonymizer.git
+$ cd vk-deanonymizer/
+$ sudo apt update
+$ sudo apt install python3
+$ sudo apt install python3-pip
+$ sudo pip3 install -r requirements.txt
+```
+## Установка на Windows
 
 
 
