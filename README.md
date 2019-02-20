@@ -10,11 +10,20 @@
 * Друзья цели не должны быть скрыты.
 * Вы не должны быть в ЧС у цели.
 
+# Установка
 <details>
-  <summary><h3>Установка (Linux)</h1></summary>
+  <summary><h2>Установка (Linux)</h1></summary>
+  
   text 
   text
- </details>
+</details>
+
+<details>
+  <summary><h2>Установка (Windows)</h1></summary>
+  
+  text 
+  text
+</details>
 
 
 
