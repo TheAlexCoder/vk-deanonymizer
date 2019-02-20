@@ -11,7 +11,7 @@
 * Вы не должны быть в ЧС у цели.
 
 <details>
-  <summary># Установка (Linux)</summary>
+  <summary><h1>Установка (Linux)</h1></summary>
   text 
   text
  </details>
