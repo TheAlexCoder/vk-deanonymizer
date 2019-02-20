@@ -72,8 +72,6 @@ def main():
     max = lib.get_max_count_of_same_elements(last_names)
     possible_last_name = lib.get_possible(last_names, max)
 
-    info = lib.get_info(user_id)
-
     tab = '     '
 
     title = tab + 'Report for ' + name + ' (' + link + ')'
