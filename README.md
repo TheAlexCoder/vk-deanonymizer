@@ -1,6 +1,6 @@
 # VK Deanonymizer
-## Программа, деанонимизируящая аккаунты VK
 <a href="https://python.org"><img src="https://img.shields.io/badge/python-3-green.svg" /></a>
+## Программа, деанонимизируящая аккаунты VK
 
 # Как это работает?
 * Программа анализирует друзей цели и, основываясь на их открытой информации, определяет реальные данные цели.
@@ -40,8 +40,3 @@ $ sudo pip3 install -r requirements.txt
 vk-deanonymizer 123
 vk-deanonymizer 12567
 ```
-
-
-
-
-
