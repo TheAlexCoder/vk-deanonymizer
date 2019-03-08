@@ -19,39 +19,6 @@ def work_on_bdate(bdate):
         return False
 
 
-def work_on_args(argv):
-    if '--help' in argv or '-h' in argv:
-        print()
-        print('Usage: ' + argv[0] + ' [user id]')
-        print('Example: ' + argv[0] + ' 12345')
-        exit(0)
-    if len(argv) == 1:
-        log.warning('You did not specify user id')
-        print()
-        print('Usage: ' + argv[0] + ' [user id]')
-        print('Example: ' + argv[0] + ' 12345')
-        exit(0)
-
-    elif len(argv) > 2:
-        log.warning('Incorrect usage')
-        print('Example: ' + argv[0] + ' 12345')
-        exit(0)
-
-    try:
-        user_id = int(argv[1])
-
-        if user_id > 0:
-            return user_id
-
-        else:
-            log.warning('User id must be positive')
-            exit(0)
-
-    except ValueError:
-        log.warning('User id must be an integer')
-        exit(0)
-
-
 def user_get(user_id):
     response = requests.get(
         'https://api.vk.com/method/users.get',
