@@ -1,3 +1,4 @@
-*.txt
+key.txt
 __pycache__/
 .idea/
+libs/__pycache__/

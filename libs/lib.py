@@ -1,6 +1,5 @@
 import requests
-import log
-import pictorem as pct
+from libs import log, pictorem as pct
 
 with open('key.txt', 'r') as file:
     key = file.read().replace('\n', '').replace(' ', '')

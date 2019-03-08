@@ -1,18 +1,27 @@
-import pictorem as pct
-import lib
-import log
+from libs import log, pictorem as pct, lib
 import datetime
 from sys import argv
 import time
 import random
+import argparse
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='VK Deanonymizer v 1.1')
+
+    required = parser.add_argument_group('required arguments')
+    required.add_argument('--user-id', '-u', required=True, help='Target user_id', type=int)
+
+    return parser.parse_args()
 
 
 def main():
+    args = parse_args()
+    user_id = args.user_id
     current_year = datetime.datetime.today().year
-    user_id = lib.work_on_args(argv)
 
     info = lib.user_get(user_id)
-    time.sleep(0.3)
+    time.sleep(1/3)
     friends = lib.friends_get(user_id)['items']
 
     name = info['first_name'] + ' ' + info['last_name']
@@ -27,7 +36,7 @@ def main():
         try:
             cities.append(friend['city']['title'])
 
-        except:
+        except Exception:
             pass
 
         try:
@@ -40,7 +49,7 @@ def main():
                 if (current_year - byear) < 70:
                     ages.append(str(current_year - byear))
 
-        except:
+        except Exception:
             pass
 
         try:
@@ -55,7 +64,7 @@ def main():
                 sexes.append(sex)
 
 
-        except:
+        except Exception:
             pass
 
         last_names.append(friend['last_name'])
@@ -88,7 +97,7 @@ def main():
 
     try:
         print(tab + pct.green.bold('Registration date: ') + lib.get_reg_date(user_id))
-    except: pass
+    except Exception: pass
 
     print(tab + pct.green.bold('Possible last name: ') + possible_last_name)
     print(tab + pct.green.bold('Possible age: ') + possible_age)
@@ -116,7 +125,7 @@ def main():
 
         print(tab + pct.green.bold('Sex: ') + sex)
 
-    except: pass
+    except Exception: pass
 
     try:
         bdate = info['bdate']
@@ -125,31 +134,31 @@ def main():
         if bdate:
             print(tab + pct.green.bold('Age: ') + str(current_year - int(byear)))
 
-    except: pass
+    except Exception: pass
 
     try:
         city = info['city']['title']
         print(tab + pct.green.bold('City: ') + city)
 
-    except: pass
+    except Exception: pass
 
     try:
         country = info['country']['title']
         print(tab + pct.green.bold('Country: ') + country)
 
-    except: pass
+    except Exception: pass
 
     try:
         univer = info['university_name']
         print(tab + pct.green.bold('University: ') + univer)
 
-    except: pass
+    except Exception: pass
 
     try:
         fac = info['faculty_name']
         print(tab + pct.green.bold('Faculty: ') + fac)
 
-    except: pass
+    except Exception: pass
 
     print()
     print(tab + pct.white.bold('You can see more public information at ' + link))
